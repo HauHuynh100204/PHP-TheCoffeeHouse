@@ -11,11 +11,11 @@ class cart
         $img = $hinh['image'];
 
         $Size = $pd->getProductSizeId($mahh, $size);
-        $tenSize = $Size['name'];
+        $tenSize = $Size['size_name'];
         $sizeId = $Size['id'];
 
         $Topping = $pd->getProductToppingId($mahh, $topping);
-        $tenTopping = $Topping['name'];
+        $tenTopping = $Topping['topping_name'];
         $toppingId = $Topping['id'];
             // // echo $tenTopping;
 

@@ -25,4 +25,4 @@ if (isset($_SESSION['makh'])) {
     $order->updateTotalPrice($sohd, $makh, $total);
 }
 include_once "./View/order.php";
-// unset($_SESSION['cart']);
+unset($_SESSION['cart']);

@@ -48,7 +48,7 @@ class order
     function getThongTinOrderDetail($masohd)
     {
         $db = new connect();
-        $select = "SELECT DISTINCT a.id, c.name, b.topping_id, b.size_id, b.into_money, a.total_price, b.quantity, d.name, e.name FROM orders a, order_detail b, product c, size d, topping e WHERE a.id = b.order_id AND b.product_id = c.id AND d.id = b.size_id AND e.id = b.topping_id AND a.id = $masohd";
+        $select = "SELECT DISTINCT a.id, c.name, b.topping_id, b.size_id, b.into_money, a.total_price, b.quantity, d.size_name, e.topping_name FROM orders a, order_detail b, product c, size d, topping e WHERE a.id = b.order_id AND b.product_id = c.id AND d.id = b.size_id AND e.id = b.topping_id AND a.id = $masohd";
         // echo $select;
         $reusult = $db->getList($select);
         return $reusult;

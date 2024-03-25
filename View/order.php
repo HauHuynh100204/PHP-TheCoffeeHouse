@@ -156,9 +156,9 @@
                                     <tr>
                                         <td class="editable-cell"><?php echo $j; ?></td>
                                         <td class="editable-cell"><?php echo $set['name']; ?></td>
-                                        <td class="editable-cell"><?php if (isset($set['size']) && $set['size'] !== 'Null') echo 'Size: ' . $set['size'];
-                                    else echo 'Size: Không có' ?> <?php if (isset($set['topping']) && $set['topping'] !== 'Null') echo 'Topping: ' . $set['topping'];
-                                    else echo 'Topping: Không có' ?></td>
+                                        <td class="editable-cell"><?php if (isset($set['size_name']) && $set['size_name'] !== 'Null') echo 'Size: ' . $set['size_name'];
+                                                                    else echo 'Size: Không có' ?> <br> <?php if (isset($set['topping_name']) && $set['topping_name'] !== 'Null') echo 'Topping: ' . $set['topping_name'];
+                                                                    else echo 'Topping: Không có' ?></td>
                                         <td class="editable-cell">Đơn Giá: <?php echo $set['total_price'] ?></td>
                                         <td class="editable-cell">Số Lượng: <?php echo $set['quantity']; ?> </td>
                                     </tr>
