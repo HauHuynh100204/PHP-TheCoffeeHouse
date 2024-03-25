@@ -95,7 +95,7 @@ class product
         // b1: Kết nối được với dữ liệu 
         $db = new connect();
         // b2: viết câu truy vấn
-        $select = "SELECT DISTINCT b.name, b.price, b.id FROM product_detail a, size b WHERE a.size = b.id AND a.product = $id";
+        $select = "SELECT DISTINCT b.size_name, b.price, b.id FROM product_detail a, size b WHERE a.size = b.id AND a.product = $id";
         // b3: ai thực thi câu truy vấn này? getList trong class connect của file connect.php 
         $result = $db->getList($select);
         return $result;
@@ -107,7 +107,7 @@ class product
         // b1: Kết nối được với dữ liệu 
         $db = new connect();
         // b2: viết câu truy vấn
-        $select = "SELECT DISTINCT b.name, b.price, b.id FROM product_detail a, topping b WHERE a.topping = b.id AND a.product = $id";
+        $select = "SELECT DISTINCT b.topping_name, b.price, b.id FROM product_detail a, topping b WHERE a.topping = b.id AND a.product = $id";
         // b3: ai thực thi câu truy vấn này? getList trong class connect của file connect.php 
         $result = $db->getList($select);
         return $result;

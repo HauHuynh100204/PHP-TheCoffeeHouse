@@ -74,11 +74,11 @@
                             $sizes_inner = $pd->getProductSize($id);
                             $firstSize = true; // Biến để kiểm tra radio button đầu tiên
                             while ($set = $sizes_inner->fetch()) :
-                                if ($set['name'] !== 'Null') :
+                                if ($set['size_name'] !== 'Null') :
                             ?>
                                     <label class="btn-custom">
                                         <input type="radio" name="size" value="<?= $set['price'] ?>" id="size_<?= $set['id'] ?>" <?php if ($firstSize) echo 'checked'; ?>> <!--Khởi động giá trị ban đầu cho radio-->
-                                        <?= $set['name'] . ' + ' . number_format($set['price'], 0, ",", ".") ?> <span>đ</span>
+                                        <?= $set['size_name'] . ' + ' . number_format($set['price'], 0, ",", ".") ?> <span>đ</span>
                                     </label>
                             <?php
                                     $firstSize = false; // Sau khi radio button đầu tiên được chọn, đặt biến này thành false
@@ -102,11 +102,11 @@
                             $toppings_inner = $pd->getProductTopping($id);
                             $firstTopping = true; // Biến để kiểm tra radio button đầu tiên
                             while ($set = $toppings_inner->fetch()) :
-                                if ($set['name'] !== 'Null') :
+                                if ($set['topping_name'] !== 'Null') :
                             ?>
                                     <label class="btn-custom">
                                         <input type="radio" name="topping" value="<?= $set['price'] ?>" id="topping_<?= $set['id'] ?>"> <!--Khởi động giá trị ban đầu cho radio-->
-                                        <?= $set['name'] . ' + ' . number_format($set['price'], 0, ",", ".") ?> <span>đ</span>
+                                        <?= $set['topping_name'] . ' + ' . number_format($set['price'], 0, ",", ".") ?> <span>đ</span>
                                     </label>
                             <?php
                                     $firstTopping = false; // Sau khi radio button đầu tiên được chọn, đặt biến này thành false
