@@ -88,6 +88,7 @@
                                 <th>Số lượng</th>
                                 <th>Thành tiền</th>
                                 <th>Thao tác</th>
+                                <!-- <th>Sửa toàn bộ</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -112,13 +113,20 @@
                                     <td><input type="number" id="quantity-input" name="newqty[<?php echo $key; ?>]" value="<?= $item['soluong'] ?>" min="1"></td>
                                     <td><?php echo number_format($item['thanhtien'], 0, ".", ".") ?></td> <!--khắc phục lỗi không nhận đúng giá trị-->
                                     <td><a href="index.php?action=cart&act=delete_cart&id=<?php echo $key; ?>"><button type="button" class="btn btn-danger">Xóa</button></a>
-                                        <button type="submit" class="btn btn-secondary">Sửa</button>
-
+                                        <!-- <button type="submit" class="btn btn-secondary">Sửa</button> -->
                                     </td>
                                 </tr>
                             <?php
                             }
                             ?>
+                            <tr>
+                            <tr>
+                                <td colspan="6" style="text-align: center;"><b>Sửa toàn bộ số lượng sản phẩm</b></td>
+                                <td>
+                                    <button type="submit" class="btn btn-secondary">Sửa</button>
+                                </td>
+                            </tr>
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr>
